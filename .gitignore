@@ -1,11 +1,8 @@
-# All ignored
 *
 
-# Helpers
 !.gitkeep
 !*.sample
 
-# Git's Configuration
 !.gitignore
 !.gitconfig
 !.gitmodules
@@ -23,6 +20,9 @@
 !.catppuccin/delta
 
 !.config/
+
+!.config/pam.d/
+!.config/pam.d/sudo_local
 
 !.config/zsh/
 !.config/zsh/.zshenv
