@@ -1,0 +1,54 @@
+echo ".zprofile"
+
+eval "$(starship init zsh)"
+source <(fzf --zsh)
+eval "$(zoxide init zsh)"
+
+alias exit="echo '$(tput setaf 1)use tmux.$(tput sgr0)'; return 1;"
+alias e="tmux detach"
+alias ee="tmux kill-session"
+
+alias c="clear"
+
+alias vi="echo '$(tput setaf 1)use nvim.$(tput sgr0)'; return 1;"
+alias nano="echo '$(tput setaf 1)use nvim.$(tput sgr0)'; return 1;"
+alias vim="echo '$(tput setaf 1)use nvim.$(tput sgr0)'; return 1;"
+alias v="nvim"
+
+alias diff="echo '$(tput setaf 1)use delta.$(tput sgr0)'; return 1;"
+alias d="delta"
+
+alias cat="echo '$(tput setaf 1)use bat.$(tput sgr0)'; return 1;"
+alias b="bat"
+
+alias .hist="b ~/.zsh_history"
+
+alias grep="echo '$(tput setaf 1)use rg.$(tput sgr0)'; return 1;"
+alias r="rg"
+
+alias cd="echo '$(tput setaf 1)use zoxide.$(tput sgr0)'; return 1;"
+
+alias find="echo '$(tput setaf 1)use fzf.$(tput sgr0)'; return 1;"
+alias f="fzf --tmux --style full --preview 'fzf-preview.sh {}'"
+
+alias code="opencode"
+alias chat="lms chat qwen/qwen3.5-35b-a3b"
+
+alias .zshrc="v ~/.zshrc && source ~/.zshrc"
+alias .startship="v ~/.config/startship/starship.toml"
+alias .alacritty="v ~/.config/alacritty/alacritty.toml"
+alias .gitignore="v ~/.gitignore"
+alias .gitconfig="v ~/.gitconfig"
+alias .tmux="v ~/.tmux.conf && tmux source ~/.tmux.conf"
+alias .nvim="v ~/.config/nvim/init.lua"
+
+alias ls="echo '$(tput setaf 1)use eza.$(tput sgr0)'; return 1;"
+alias l="eza --group-directories-first --show-symlinks --icons --hyperlink --group --smart-group --header --octal-permissions --git --git-repos --flags"
+
+alias lt="l --tree"
+alias la="l --all --all"
+
+alias ll="l --long"
+alias lla="la --long"
+alias llt="lt --long"
+

@@ -1,0 +1,69 @@
+general.import = [
+	"~/.catppuccin/alacritty/catppuccin-mocha.toml"
+]
+
+[env]
+TERM = "tmux-256color"
+
+[terminal.shell]
+program="/opt/homebrew/bin/zsh"
+args = ["-d", "-c", "tmux attach || tmux new-session -A -s default"]
+
+[terminal]
+osc52 = "CopyPaste"
+
+[selection]
+save_to_clipboard = true
+
+[window]
+decorations="Buttonless"
+padding={ x = 5,y = 2}
+dynamic_padding=true
+opacity=0.95
+startup_mode="SimpleFullscreen"
+blur=true
+resize_increments=true
+level="AlwaysOnTop"
+
+[font]
+size=14.0
+
+[font.normal]
+family="JetBrainsMono Nerd Font"
+style="Regular"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style="Bold"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style="Italic"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+style = "Bold Italic"
+
+[colors]
+transparent_background_colors=true
+
+[cursor.style]
+blinking="Always"
+
+[scrolling]
+history=0
+multiplier=0
+
+[mouse]
+hide_when_typing = true
+bindings = []
+
+[keyboard]
+bindings = [
+  { key = "Up",    mods = "None", action = "ReceiveChar" },
+  { key = "Down",  mods = "None", action = "ReceiveChar" },
+  { key = "Left",  mods = "None", action = "ReceiveChar" },
+  { key = "Right", mods = "None", action = "ReceiveChar" },
+  { key = "C", mods = "Command", action = "ReceiveChar" },
+  { key = "V", mods = "Command", action = "ReceiveChar" },
+]

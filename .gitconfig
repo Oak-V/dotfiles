@@ -1,0 +1,36 @@
+[include]
+	path = "~/.catppuccin/delta/catppuccin.gitconfig"
+
+[include]
+	path = "~/.user.gitconfig"
+
+[delta]
+	features = catppuccin-mocha
+
+[core]
+	editor = nvim
+	pager = delta
+[commit]
+	gpgsign = true
+[push]
+	gpgSign = true
+[gpg]
+	minTrustLevel = ultimate
+[tag]
+	forceSignAnnotated = true
+	gpgSign = true
+[log]
+	showSignature = true
+[init]
+	defaultBranch = main
+[credential]
+	helper = osxkeychain
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	side-by-side = true
+[merge]
+	conflictStyle = zdiff3
+[http]
+	postBuffer = 524288000

@@ -1,0 +1,16 @@
+[settings]
+experimental = true
+
+[tools]
+bun = "latest"
+deno = "latest"
+elixir = "latest"
+erlang = "latest"
+go = "latest"
+kotlin = { version = "latest", asset_pattern = "kotlin-compiler-*.zip", bin_path = "kotlinc/bin" }
+lua = "latest"
+node = "latest"
+perl = "latest"
+python = "latest"
+ruby = "latest"
+rust = "latest"

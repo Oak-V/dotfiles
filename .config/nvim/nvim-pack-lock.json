@@ -1,0 +1,20 @@
+{
+  "plugins": {
+    "catppuccin": {
+      "rev": "426dbebe06b5c69fd846ceb17b42e12f890aedf1",
+      "src": "https://github.com/catppuccin/nvim"
+    },
+    "hardtime.nvim": {
+      "rev": "b4e431934af1fe224a3a801f632c008278cb7628",
+      "src": "https://github.com/m4xshen/hardtime.nvim"
+    },
+    "lspconfig": {
+      "rev": "3c156abc4f7912f66d8687512d75b939b14fbc42",
+      "src": "https://github.com/neovim/nvim-lspconfig"
+    },
+    "nvim-lspconfig": {
+      "rev": "3c156abc4f7912f66d8687512d75b939b14fbc42",
+      "src": "https://github.com/neovim/nvim-lspconfig"
+    }
+  }
+}
