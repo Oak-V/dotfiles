@@ -1,5 +1,3 @@
-echo ".zshenv"
-
 export KEYTIMEOUT=1
 
 export STARSHIP_CONFIG="${HOME}/.config/starship/starship.toml"
@@ -15,5 +13,3 @@ export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@3)"
 export PATH="${HOME}/.local/bin:$PATH"
 export PATH="$(brew --prefix curl)/bin:$PATH"
 export PATH="$(brew --prefix ffmpeg-full)/bin:$PATH"
-export PATH="$(brew --prefix llvm)/bin:$PATH"
-export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"

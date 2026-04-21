@@ -1,5 +1,3 @@
-echo ".zlogin"
-
 if [[ -n "$TMUX" ]]; then
 	:
 else

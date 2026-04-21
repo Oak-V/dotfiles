@@ -1,5 +1,3 @@
-echo "ROOT | .zshenv"
-
 eval "$(/opt/homebrew/bin/brew shellenv zsh)"
 
 if [[ -n "$TMUX" ]]; then
