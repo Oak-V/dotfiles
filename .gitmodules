@@ -19,3 +19,15 @@
 [submodule "dev/pam_apple_companion"]
 	path = dev/pam_apple_companion
 	url = ssh://git@codeberg.org/oak-v/pam_apple_companion.git
+[submodule ".hammerspoon/Spoons/LocalKeyBinder.spoon"]
+	path = .hammerspoon/Spoons/LocalKeyBinder.spoon
+	url = ssh://git@codeberg.org/oak-v/KeyBinder.spoon.git
+[submodule ".catppuccin/starship"]
+	path = .catppuccin/starship
+	url = https://github.com/catppuccin/starship.git
+[submodule ".catppuccin/eza"]
+	path = .catppuccin/eza
+	url = https://github.com/eza-community/eza.git
+[submodule "/Users/vinicius/.catppuccin/eza"]
+	path = /Users/vinicius/.catppuccin/eza
+	url = https://github.com/catppuccin/eza.git

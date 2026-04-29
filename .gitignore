@@ -1,76 +1,88 @@
 *
 
+!.luarc.json
 !.gitkeep
-!*.sample
-
-!.gitignore
-!.gitconfig
-!.gitmodules
-
-!.zshenv
-!.zlogout
-
-!Brewfile
 !.editorconfig
 
-!.bin/
-!.bin/*.sh
+!/.gitignore
+!/.gitconfig
+!/.gitmodules
 
-!.catppuccin/
-!.catppuccin/bat
-!.catppuccin/delta
+!/.zshenv
 
-!.config/
+!/Brewfile
 
-!.config/pam.d/
-!.config/pam.d/sudo_local
+!/.ssh/
+!/.ssh/config
 
-!.config/zsh/
-!.config/zsh/.zshenv
-!.config/zsh/.zprofile
-!.config/zsh/.zshrc
-!.config/zsh/.zlogin
-!.config/zsh/.zlogout
-!.config/zsh/.zalias
+!/.bin/
+!/.bin/*.sh
 
-!.config/tmux/
-!.config/tmux/tmux.conf
+!/.catppuccin/
+!/.catppuccin/bat
+!/.catppuccin/delta
+!/.catppuccin/alacritty
+!/.catppuccin/starship
+!/.catppuccin/eza
 
-!.config/starship/
-!.config/starship/*.toml
+!/.config/
 
-!.config/alacritty/
-!.config/alacritty/*.toml
+!/.config/pam.d/
+!/.config/pam.d/sudo_local
 
-!.hammerspoon/
-!.hammerspoon/*.lua
-!.hammerspoon/Spoons/
-!.hammerspoon/Spoons/Local*
+!/.config/eza/
+!/.config/eza/*.yml
 
-!.config/mise/
-!.config/mise/*.toml
+!/.config/zsh/
+!/.config/zsh/.zshenv
+!/.config/zsh/.zprofile
+!/.config/zsh/.zshrc
+!/.config/zsh/.zlogin
+!/.config/zsh/.zlogout
+!/.config/zsh/*.sh
 
-!.config/opencode/
-!.config/opencode/*.json
+!/.config/tmux/
+!/.config/tmux/tmux.conf
 
-!.config/nvim/
-!.config/nvim/*.lua
-!.config/nvim/*.json
-!.config/nvim/*.jsonc
+!/.config/starship/
+!/.config/starship/*.toml
+!/.config/starship/*.txt
 
-!.config/bat/
-!.config/bat/config
-!.config/bat/themes
+!/.config/alacritty/
+!/.config/alacritty/*.toml
 
-!.config/karabiner/
-!.config/karabiner/*.json
+!/.hammerspoon/
+!/.hammerspoon/*.lua
+!/.hammerspoon/Spoons/
+!/.hammerspoon/Spoons/Local*
 
-!.bin/
-!.bin/*.sh
+!/.config/mise/
+!/.config/mise/*.toml
 
-!dev/
-!dev/*/
+!/.config/opencode/
+!/.config/opencode/*.json
 
-!Library/
-!Library/LaunchAgents/
-!Library/LaunchAgents/local.*.plist
+!/.config/nvim/
+!/.config/nvim/*.lua
+!/.config/nvim/*.json
+!/.config/nvim/*.jsonc
+
+!/.config/bat/
+!/.config/bat/config
+!/.config/bat/themes
+
+!/.config/karabiner/
+!/.config/karabiner/*.json
+
+!/.bin/
+!/.bin/*.sh
+
+!/dev/
+!/dev/*/
+
+!/Library/
+!/Library/LaunchAgents/
+!/Library/LaunchAgents/local.*.plist
+
+.secret.*
+!*.sample

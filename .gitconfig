@@ -2,7 +2,7 @@
 	path = "~/.catppuccin/delta/catppuccin.gitconfig"
 
 [include]
-	path = "~/.user.gitconfig"
+	path = "~/.secret.gitconfig"
 
 [delta]
 	features = catppuccin-mocha
