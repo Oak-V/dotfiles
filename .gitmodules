@@ -34,3 +34,6 @@
 [submodule "dev/sogcli"]
 	path = dev/sogcli
 	url = git@github.com:visionik/sogcli.git
+[submodule "dev/brew"]
+	path = dev/brew
+	url = git@github.com:Oak-V/brew.git
