@@ -1,12 +1,9 @@
 [include]
 	path = "~/.catppuccin/delta/catppuccin.gitconfig"
-
 [include]
 	path = "~/.secret.gitconfig"
-
 [delta]
 	features = catppuccin-mocha
-
 [core]
 	editor = nvim
 	pager = delta
@@ -17,6 +14,7 @@
 	autoSetupRemote = true
 [gpg]
 	minTrustLevel = ultimate
+	program = /opt/homebrew/bin/gpg
 [tag]
 	forceSignAnnotated = true
 	gpgSign = true
@@ -35,3 +33,9 @@
 	conflictStyle = zdiff3
 [http]
 	postBuffer = 524288000
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[url "git@codeberg.org:"]
+	insteadOf = https://codeberg.org/
+[protocol]
+	version = 2

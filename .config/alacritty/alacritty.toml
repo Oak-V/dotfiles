@@ -52,7 +52,16 @@ multiplier=0
 
 [mouse]
 hide_when_typing = true
-bindings = []
+bindings = [
+#   { mouse = "Middle", action = "ReceiveChar" },
+   { mouse = "Right", action = "ReceiveChar" },
+   { mouse = "Right", mods = "Control", action = "ReceiveChar" },
+   { mouse = "Left", action = "ReceiveChar" },
+   { mouse = "Left", mods = "Control", action = "ReceiveChar" },
+]
+
+[hints]
+enabled = []
 
 [keyboard]
 bindings = [
@@ -169,7 +178,6 @@ bindings = [
    { key = "H", mods = "Command|Alt", action = "ReceiveChar" },
    { key = "M", mods = "Command", action = "ReceiveChar" },
    { key = "Q", mods = "Command", action = "ReceiveChar" },
-   { key = "W", mods = "Command", action = "ReceiveChar" },
    { key = "N", mods = "Command", action = "ReceiveChar" },
    { key = "T", mods = "Command", action = "ReceiveChar" },
    { key = "F", mods = "Command|Control", action = "ReceiveChar" },

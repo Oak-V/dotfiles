@@ -1,33 +1,36 @@
 [submodule ".catppuccin/bat"]
 	path = .catppuccin/bat
-	url = https://github.com/catppuccin/bat.git
+	url = git@github.com:catppuccin/bat.git
 [submodule ".catppuccin/delta"]
 	path = .catppuccin/delta
-	url = https://github.com/catppuccin/delta.git
+	url = git@github.com:catppuccin/delta.git
 [submodule ".catppuccin/alacritty"]
 	path = .catppuccin/alacritty
-	url = https://github.com/catppuccin/alacritty.git
+	url = git@github.com:catppuccin/alacritty.git
 [submodule ".hammerspoon/Spoons/LocalKeyCastr.spoon"]
 	path = .hammerspoon/Spoons/LocalKeyCastr.spoon
-	url = ssh://git@codeberg.org/oak-v/KeyCastr.spoon.git
+	url = git@codeberg.org:oak-v/KeyCastr.spoon.git
 [submodule ".hammerspoon/Spoons/LocalFocusFollowMouse.spoon"]
 	path = .hammerspoon/Spoons/LocalFocusFollowMouse.spoon
-	url = ssh://git@codeberg.org/oak-v/FocusFollow.spoon.git
+	url = git@codeberg.org:oak-v/FocusFollow.spoon.git
 [submodule ".hammerspoon/Spoons/LocalFocusFollow.spoon"]
 	path = .hammerspoon/Spoons/LocalFocusFollow.spoon
-	url = ssh://git@codeberg.org/oak-v/FocusFollow.spoon.git
+	url = git@codeberg.org:oak-v/FocusFollow.spoon.git
 [submodule "dev/pam_apple_companion"]
 	path = dev/pam_apple_companion
-	url = ssh://git@codeberg.org/oak-v/pam_apple_companion.git
+	url = git@codeberg.org:oak-v/pam_apple_companion.git
 [submodule ".hammerspoon/Spoons/LocalKeyBinder.spoon"]
 	path = .hammerspoon/Spoons/LocalKeyBinder.spoon
-	url = ssh://git@codeberg.org/oak-v/KeyBinder.spoon.git
+	url = git@codeberg.org:oak-v/KeyBinder.spoon.git
 [submodule ".catppuccin/starship"]
 	path = .catppuccin/starship
-	url = https://github.com/catppuccin/starship.git
+	url = git@github.com:catppuccin/starship.git
 [submodule ".catppuccin/eza"]
 	path = .catppuccin/eza
-	url = https://github.com/eza-community/eza.git
-[submodule "/Users/vinicius/.catppuccin/eza"]
-	path = /Users/vinicius/.catppuccin/eza
-	url = https://github.com/catppuccin/eza.git
+	url = git@github.com:eza-community/eza.git
+[submodule ".catppuccin/eza"]
+	path = .catppuccin/eza
+	url = git@github.com:catppuccin/eza.git
+[submodule "dev/sogcli"]
+	path = dev/sogcli
+	url = git@github.com:visionik/sogcli.git

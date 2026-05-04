@@ -13,6 +13,7 @@ alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
 alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 
 alias oa="env -i open -a"
+alias oas="oa Safari"
 
 alias exit="echo '$(tput setaf 1)use tmux.$(tput sgr0)'; return 1;"
 alias e="tmux detach"
@@ -56,6 +57,7 @@ alias .gitconfig="v ~/.gitconfig"
 alias .tmux="v ~/.config/tmux/tmux.conf && tmux source ~/.config/tmux/tmux.conf"
 alias .nvim="v ~/.config/nvim/init.lua"
 alias .hammerspoon="v ~/.hammerspoon/init.lua"
+alias .update="v ~/.bin/update.sh && source ~/.bin/update.sh && update"
 
 alias ls="echo '$(tput setaf 1)use eza.$(tput sgr0)'; return 1;"
 

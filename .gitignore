@@ -10,7 +10,7 @@
 
 !/.zshenv
 
-!/Brewfile
+!/.Brewfile
 
 !/.ssh/
 !/.ssh/config
@@ -76,13 +76,18 @@
 
 !/.bin/
 !/.bin/*.sh
+!/.bin/*.rs
 
 !/dev/
 !/dev/*/
 
-!/Library/
-!/Library/LaunchAgents/
-!/Library/LaunchAgents/local.*.plist
+!/.services/
+!/.services/
+!/.services/local.*.plist
+
+!/.gnupg/
+!/.gnupg/gpg.conf
+!/.gnupg/gpg-agent.conf
 
 .secret.*
 !*.sample
