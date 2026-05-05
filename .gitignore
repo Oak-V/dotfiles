@@ -63,6 +63,7 @@
 
 !/.config/opencode/
 !/.config/opencode/*.json
+!/.config/opencode/*.jsonc
 
 !/.config/nvim/
 !/.config/nvim/*.lua

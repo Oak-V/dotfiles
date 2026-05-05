@@ -1,0 +1,18 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "disabled_providers": [],
+  "provider": {
+    "mlx-local": {
+      "name": "MLX",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "http://127.0.0.1:8080"
+      },
+      "models": {
+        "x": {
+          "name": "x"
+        }
+      }
+    }
+  }
+}
