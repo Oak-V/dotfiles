@@ -18,12 +18,13 @@
 !/.bin/
 !/.bin/*.sh
 
-!/.catppuccin/
-!/.catppuccin/bat
-!/.catppuccin/delta
-!/.catppuccin/alacritty
-!/.catppuccin/starship
-!/.catppuccin/eza
+!/.repos/
+!/.repos/catppuccin/
+!/.repos/catppuccin/bat
+!/.repos/catppuccin/delta
+!/.repos/catppuccin/alacritty
+!/.repos/catppuccin/starship
+!/.repos/catppuccin/eza
 
 !/.config/
 
