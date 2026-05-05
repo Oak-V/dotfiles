@@ -22,7 +22,6 @@ export PATH="$HOME/.local/bin:$PATH"
 
 eval "$(/opt/homebrew/bin/brew shellenv zsh)"
 eval "$(mise activate zsh)"
-eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
 export PATH="$(brew --prefix curl)/bin:$PATH"
