@@ -1,3 +1,42 @@
+ITALIC=$(tput sitm)
+R_ITALIC=$(tput ritm)
+
+BOLD=$(tput bold)
+R_BOLD=$'\e[22m'
+
+RED=$(tput setaf 1)
+GREEN=$(tput setaf 2)
+BLUE=$(tput setaf 4)
+R_COLOR=$(tput op)
+
+red() {
+  echo "$RED$@$R_COLOR"
+}
+
+green() {
+  echo "$GREEN$@$R_COLOR"
+}
+
+blue() {
+  echo "$BLUE$@$R_COLOR"
+}
+
+italic() {
+  echo "$ITALIC$@$R_ITALIC"
+}
+
+bold() {
+  echo "$BOLD$@$R_BOLD"
+}
+
+log.info() {
+   echo "\n$(italic "$(blue "Info:")") $@\n"
+}
+
+log.error() {
+   echo "\n$(bold "$(red "Error:")") $@\n"
+}
+
 alias x="gxargs"
 
 _.gpgedit() {
@@ -28,6 +67,7 @@ _.gpgsource() {
 
    source <(gpg --quiet -d "$file")
 }
+
 alias gsrc=" _.gpgsource"
 
 alias shl=" ssh-add -L"
@@ -39,6 +79,29 @@ alias ggls=" gpg --list-secret-keys --with-subkey-fingerprints --with-keygrip ${
 alias ggqs=" gpg --quick-add-key ${GPG_PRIMARY_KEY:-$GPG_DEFAULT_PRIMARY_KEY} ${GPG_KIND:-$GPG_DEFAULT_KIND} sign ${GPG_EXPIRATION:-$GPG_DEFAULT_EXPI}"
 alias ggqa=" gpg --quick-add-key ${GPG_PRIMARY_KEY:-$GPG_DEFAULT_PRIMARY_KEY} ${GPG_KIND:-$GPG_DEFAULT_KIND} auth ${GPG_EXPIRATION:-$GPG_DEFAULT_EXPI}"
 
+alias brew="log.error use brew helpers $(italic \(e.g. bw, bwi and bwr\)).; return 1;"
+
+
+bw() {
+   local command="${1:-}"
+
+   case $command in
+      install|remove)
+         trap '\brew bundle dump --file ~/.Brewfile --force &> /dev/null; log.info brew bundle $(bold updated).' EXIT
+         ;;
+      *)
+         log.info brew bundle update $(bold skipped).
+         ;;
+   esac
+
+
+   \brew $@
+}
+
+alias bwi="bw install"
+alias bwr="bw remove"
+
+
 alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
 alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 
@@ -46,31 +109,31 @@ alias oa="env -i open -a"
 alias oas="oa Safari"
 alias oak="oa /System/Library/CoreServices/Applications/'Keychain Access.app'"
 
-alias exit="echo '$(tput setaf 1)use tmux.$(tput sgr0)'; return 1;"
+alias exit="log.error use tmux.; return 1;"
 alias e="tmux detach"
 alias ee="tmux kill-session"
 
 alias c="clear"
 
-alias vi="echo '$(tput setaf 1)use nvim.$(tput sgr0)'; return 1;"
-alias nano="echo '$(tput setaf 1)use nvim.$(tput sgr0)'; return 1;"
-alias vim="echo '$(tput setaf 1)use nvim.$(tput sgr0)'; return 1;"
+alias vi="log.error use nvim.; return 1;"
+alias nano="log.error use nvim.; return 1;"
+alias vim="log.error use nvim.; return 1;"
 alias v="nvim"
 
-alias diff="echo '$(tput setaf 1)use delta.$(tput sgr0)'; return 1;"
+alias diff="log.error use delta.; return 1;"
 alias d="delta"
 
-alias cat="echo '$(tput setaf 1)use bat.$(tput sgr0)'; return 1;"
+alias cat="log.error use bat.; return 1;"
 alias b="bat"
 
 alias .hist="b ~/.zsh_history"
 
-alias grep="echo '$(tput setaf 1)use rg.$(tput sgr0)'; return 1;"
+alias grep="log.error use rg.; return 1;"
 alias r="rg"
 
-alias cd="echo '$(tput setaf 1)use zoxide.$(tput sgr0)'; return 1;"
+alias cd="log.error use zoxide.; return 1;"
 
-alias find="echo '$(tput setaf 1)use fzf.$(tput sgr0)'; return 1;"
+alias find="log.error use fzf.; return 1;"
 alias f="fzf"
 
 alias code="opencode"
@@ -90,7 +153,7 @@ alias .nvim="v ~/.config/nvim/init.lua"
 alias .hammerspoon="v ~/.hammerspoon/init.lua"
 alias .update="v ~/.bin/update.sh && source ~/.bin/update.sh && update"
 
-alias ls="echo '$(tput setaf 1)use eza.$(tput sgr0)'; return 1;"
+alias ls="log.error use eza.; return 1;"
 
 alias l="eza --group-directories-first --show-symlinks --icons --hyperlink --group --smart-group --header --octal-permissions --git --git-repos --flags"
 alias lg="l --git-ignore"

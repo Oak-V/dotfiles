@@ -31,3 +31,6 @@
 [submodule "dev/brew"]
 	path = dev/brew
 	url = git@github.com:Oak-V/brew.git
+[submodule "dev/motim-oci"]
+	path = dev/motim-oci
+	url = git@codeberg.org:motim/ocigit

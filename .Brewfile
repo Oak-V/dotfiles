@@ -15,6 +15,7 @@ brew "glances"
 brew "gnupg"
 brew "hf"
 brew "less"
+brew "lima"
 brew "lua-language-server"
 brew "mise"
 brew "mlx-lm", restart_service: :changed
