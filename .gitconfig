@@ -1,5 +1,5 @@
 [include]
-	path = "~/.catppuccin/delta/catppuccin.gitconfig"
+	path = "~/.repos/catppuccin/delta/catppuccin.gitconfig"
 [include]
 	path = "~/.secret.gitconfig"
 [delta]
@@ -22,8 +22,6 @@
 	showSignature = true
 [init]
 	defaultBranch = main
-[credential]
-	helper = osxkeychain
 [interactive]
 	diffFilter = delta --color-only
 [delta]

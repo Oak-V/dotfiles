@@ -1,6 +1,7 @@
-rm -fr ~/.bash_*(N)
-   ~/.zsh_sessions(N) \
-   ~/.config/zsh/.zsh_sessions(N) \
-   ~/.config/zsh/.zsh_history(N) \
-   ~/.zcompdump(N) \
-   ~/.config/zsh/.zcompdump(N)
+rm -rf ~/.bash_*(N)
+rm -rf ~/.zsh_sessions*(N)
+rm -rf ~/.config/zsh/.zsh_sessions*(N)
+rm -rf ~/.zcompdump*(N)
+rm -rf ~/.config/zsh/.zcompdump*(N)
+rm -rf ~/.secret.gitconfig*(N)
+rm -rf ~/.config/zsh/.zcompcache*(N)

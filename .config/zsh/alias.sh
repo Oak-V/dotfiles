@@ -1,19 +1,50 @@
 alias x="gxargs"
 
+_.gpgedit() {
+   set -uo pipefail
+
+   local file="${1:?usage: gedt file.gpg}"
+   local run="${2:-0}"
+
+   umask 077
+
+   local tmp=$(mktemp)
+   trap 'rm -f "'"$tmp"'"' EXIT
+
+   gpg --yes --quiet -d -o "$tmp" "$file"
+
+   nvim -n -c 'set ft=sh' "$tmp"
+
+   [[ "$run" == "1" ]] && source "$tmp" 2> /dev/tty
+
+   gpg --yes --quiet -e -r "${GPG_ENCR_SUBKEY:-$GPG_DEFAULT_ENCR_SUBKEY}" -o "$file" "$tmp"
+}
+alias gedt=" _.gpgedit"
+
+_.gpgsource() {
+   set -uo pipefail
+
+   local file="${1:?usage: gsrc file.gpg}"
+
+   source <(gpg --quiet -d "$file")
+}
+alias gsrc=" _.gpgsource"
+
 alias shl=" ssh-add -L"
-alias ggd=" gpg --delete-secret-keys $GPG_DEFAULT_PRIMARY_KEY\!"
-alias gge=" gpg --export --armor $GPG_DEFAULT_PRIMARY_KEY"
+alias ggd=" gpg --delete-secret-keys ${GPG_PRIMARY_KEY:-$GPG_DEFAULT_PRIMARY_KEY}\!"
+alias gge=" gpg --export --armor ${GPG_PRIMARY_KEY:-$GPG_DEFAULT_PRIMARY_KEY}"
 alias gges=" gpg --export-secret-keys --armor"
-alias ggl=" gpg --list-keys --with-subkey-fingerprints --with-keygrip $GPG_DEFAULT_PRIMARY_KEY"
-alias ggls=" gpg --list-secret-keys --with-subkey-fingerprints --with-keygrip $GPG_DEFAULT_PRIMARY_KEY"
-alias ggqs=" gpg --quick-add-key $GPG_DEFAULT_PRIMARY_KEY $GPG_DEFAULT_KIND sign $GPG_DEFAULT_EXPIRATION"
-alias ggqa=" gpg --quick-add-key $GPG_DEFAULT_PRIMARY_KEY $GPG_DEFAULT_KIND auth $GPG_DEFAULT_EXPIRATION"
+alias ggl=" gpg --list-keys --with-subkey-fingerprints --with-keygrip ${GPG_PRIMARY_KEY:-$GPG_DEFAULT_PRIMARY_KEY}"
+alias ggls=" gpg --list-secret-keys --with-subkey-fingerprints --with-keygrip ${GPG_PRIMARY_KEY:-$GPG_DEFAULT_PRIMARY_KEY}"
+alias ggqs=" gpg --quick-add-key ${GPG_PRIMARY_KEY:-$GPG_DEFAULT_PRIMARY_KEY} ${GPG_KIND:-$GPG_DEFAULT_KIND} sign ${GPG_EXPIRATION:-$GPG_DEFAULT_EXPI}"
+alias ggqa=" gpg --quick-add-key ${GPG_PRIMARY_KEY:-$GPG_DEFAULT_PRIMARY_KEY} ${GPG_KIND:-$GPG_DEFAULT_KIND} auth ${GPG_EXPIRATION:-$GPG_DEFAULT_EXPI}"
 
 alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
 alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 
 alias oa="env -i open -a"
 alias oas="oa Safari"
+alias oak="oa /System/Library/CoreServices/Applications/'Keychain Access.app'"
 
 alias exit="echo '$(tput setaf 1)use tmux.$(tput sgr0)'; return 1;"
 alias e="tmux detach"

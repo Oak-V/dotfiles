@@ -6,3 +6,5 @@ eval "$(tree-sitter complete --shell zsh)"
 eval "$(opencode completion)"
 
 source <(fzf --zsh)
+
+gsrc "$ZDOTDIR/.secret.token.sh.gpg"

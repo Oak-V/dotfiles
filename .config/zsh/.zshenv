@@ -1,7 +1,5 @@
-export GPG_DEFAULT_KIND=ed25519
-export GPG_DEFAULT_EXPIRATION=1y
-
 export LC_ALL=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 export MANPAGER="sh -c 'ansifilter | bat -plman'"
@@ -27,9 +25,9 @@ eval "$(zoxide init zsh)"
 export PATH="$(brew --prefix curl)/bin:$PATH"
 export PATH="$(brew --prefix ffmpeg-full)/bin:$PATH"
 
-source "$ZDOTDIR/.secret.sh"
+source "$ZDOTDIR/.secret.pii.sh"
 source "$ZDOTDIR/alias.sh"
-
+source "$ZDOTDIR/gpg.sh"
 
 disable log
 

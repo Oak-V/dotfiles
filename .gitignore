@@ -83,14 +83,14 @@
 
 !/dev/
 !/dev/*/
+!/dev/*/*/
 
 !/.services/
 !/.services/
 !/.services/local.*.plist
 
 !/.gnupg/
-!/.gnupg/gpg.conf
-!/.gnupg/gpg-agent.conf
+!/.gnupg/*.conf
 
 .secret.*
 !*.sample
